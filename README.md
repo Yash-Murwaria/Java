@@ -2,82 +2,104 @@
 # 🗳️ Java Voting System
 
 ## 📚 Project Summary
-This is a Java-based Voting System created as part of our group project.
-It simulates the core functionalities of an EVM (Electronic Voting Machine) and can be potentially used in real-world digital elections.
-It includes voter and candidate registration, vote casting, and real-time result tracking.
+This is a Java-based Voting System built as part of our academic project.  
+It simulates the core functionalities of an **Electronic Voting Machine (EVM)** with modular architecture, input validation, data persistence using serialization, and structured code based on best practices.
+
+The system supports:
+- ✅ Voter & Candidate Registration
+- ✅ Vote Casting
+- ✅ Double Voting Prevention
+- ✅ Result Tracking
+- ✅ Voting Start/Stop Control
+- ✅ Persistent Vote Storage
+
 
 ## 👨‍💻 Team Members
-- Yash Murwaria 
+- Yash Murwaria  
 - Suryansh Yadav  
 - Ayushi Tyagi  
-- Harshit Khurana
-- 
-## Folder Layour
+- Harshit Khurana  
+
+
+## 📁 Folder Layout
+
 Java-Voting-System/
 ├── model/
-│   ├── Voter.java
-│   ├── Candidate.java
-│   └── VoteManager.java
+│   ├── Voter.java              # Voter class with ID, name, vote status
+│   ├── Candidate.java          # Candidate class with ID, name, vote count
+│   └── VoteManager.java        # Main logic for registration, voting, results
+│
 ├── data/
-│   └── FileStorage.java
+│   └── FileStorage.java        # Save/load system state using serialization
+│
 ├── utils/
-│   └── InputValidator.java
-├── MainApp.java
-└── votes.ser
+│   └── InputValidator.java     # Regex-based input validation for names
+│
+├── votes.ser                   # Serialized file storing voter & vote state
+├── MainApp.java                # Entry point for running the console menu
+└── README.md                   # This documentation file
 
 ## ✅ Features Implemented
+
 - ✅ Voter Registration  
 - ✅ Candidate Registration  
 - ✅ Vote Casting  
-- ✅ View Results  
+- ✅ View Results (sorted by highest votes)  
 - ✅ Start/Stop Voting  
 - ✅ Prevent Double Voting  
-- ✅ Error Handling with Informative Messages  
+- ✅ Error Handling with Messages  
+- ✅ Data Persistence using File Serialization  
+- ✅ Modular Code (MVC-aligned folder structure)
 
 ## 🚀 Innovations
-- ⚡ Real-time vote result updates  
-- 🌐 Designed with real-world usability in mind  
-- 🔒 Prevents double voting through voter ID tracking  
-- ❗ Robust error handling for invalid inputs and duplicate votes
+
+- 🔄 Real-time vote result sorting  
+- 🔐 Double voting protection with state tracking  
+- 📂 Persistent vote saving and reloading  
+- 🧠 Regex-based input validation  
+- 🧱 Clean, modular architecture with reusable components  
+- 🛑 Voting is only allowed when active  
 
 ## 🛠️ Technologies Used
-- **Language:** Java 23  
-- **Concepts Applied:**  
-  - Java Collection Framework (HashMap, etc.)  
-  - Basic Input/Output  
-  - Control Structures (Loops, Conditions)  
-  - Core Java Classes  
 
-## 📄 Project Structure
-- `VotingSystem.java` – Main class and console logic  
-- `OnlineVotingSystem` – Core voting logic and features  
-- `voters`, `candidates`, `votes` – Managed using Java Maps  
-- Modular functions for each menu-driven action
+- **Language:** Java 23  
+- **Concepts Used:**
+  - Java Collection Framework (`HashMap`, `ArrayList`)
+  - File I/O & Serialization
+  - Regex Validation
+  - Object-Oriented Programming
+  - Console-based UI
+
+## 📄 Project Structure Explanation
+
+- `MainApp.java` – User menu system and interaction flow  
+- `VoteManager.java` – Handles all business logic (register, vote, count, etc.)  
+- `Voter.java`, `Candidate.java` – Represent voters/candidates using OOP  
+- `FileStorage.java` – Saves & loads system state to `votes.ser`  
+- `InputValidator.java` – Centralized input validation methods  
 
 ## 🧪 Testing & Validation
-- All features tested via console menu system  
-- Input validations implemented for:
-  - Valid voter and candidate IDs  
-  - Duplicate voting prevention  
-  - Voting only within active session  
-- No crashes or runtime exceptions on invalid input
 
-## 🧾 Project Documentation
-- Documentation and design files have been submitted on **GUVI Platform** along with the GitHub link  
-- Includes class structure and flow of operations  
+- ✅ Console interactions tested for all possible input flows  
+- ✅ Input validation checks:
+  - Names: must be alphabetic (regex enforced)
+  - Duplicate votes: not allowed
+  - Voting outside allowed session: blocked
+- ✅ No runtime exceptions observed during invalid input
+- ✅ Saved state successfully restored after relaunch
 
 ## 📌 Instructions to Run
-1. Clone the repository:  
-   ```bash
-   git clone https://github.com/Yash-Murwaria/Java
 
-	2.	Compile and run using terminal or any Java IDE:
+1. **Clone this repository:**
+```bash
+git clone https://github.com/Yash-Murwaria/Java-Voting-System.git
+cd Java-Voting-System
 
-javac VotingSystem.java
-java VotingSystem
+	2.	Compile and run (Java 23):
 
-📌 Notes
-	•	Ensure Java 23 is installed in your environment.
-	•	Designed for console-based interaction with potential for GUI upgrades in future versions.
+javac model/*.java data/*.java utils/*.java MainApp.java
+java MainApp
+
+	3.	Vote Data Will Be Saved In: votes.ser
 
 Made with ❤️ by Team STACK
