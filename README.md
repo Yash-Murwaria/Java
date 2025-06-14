@@ -10,46 +10,20 @@ It includes voter and candidate registration, vote casting, and real-time result
 - Yash Murwaria 
 - Suryansh Yadav  
 - Ayushi Tyagi  
-- Harshit Khurana  
-
+- Harshit Khurana
+- 
+## Folder Layour
 Java-Voting-System/
-│
-├── model/                       # Data classes (Candidate, Voter, VoteManager)
-│   ├── Candidate.java
+├── model/
 │   ├── Voter.java
+│   ├── Candidate.java
 │   └── VoteManager.java
-│
-├── view/                        # GUI components (Swing-based)
-│   ├── LoginFrame.java
-│   ├── MainFrame.java
-│   ├── AdminPanel.java
-│   └── ResultPanel.java
-│
-├── controller/                 # Handles logic and event control
-│   ├── AuthController.java
-│   ├── VoteController.java
-│   └── AdminController.java
-│
-├── data/                        # Serialization and storage
-│   ├── VoterData.java
-│   ├── FileStorage.java
-│   └── votes.ser               # Serialized vote file
-│
-├── utils/                       # Utility functions and validators
-│   ├── InputValidator.java
-│   └── LoggerUtil.java
-│
-├── assets/                      # Screenshots or other media
-│   ├── login_screen.png
-│   └── vote_results.png
-│
-├── test/                        # Unit test classes (JUnit)
-│   ├── VoteManagerTest.java
-│   └── InputValidatorTest.java
-│
-├── Main.java                    # App entry point
-├── README.md                    # Project description and guide
-└── Java_Voting_System_Documentation.pdf   # Detailed report/documentation
+├── data/
+│   └── FileStorage.java
+├── utils/
+│   └── InputValidator.java
+├── MainApp.java
+└── votes.ser
 
 ## ✅ Features Implemented
 - ✅ Voter Registration  
