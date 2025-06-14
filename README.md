@@ -92,11 +92,6 @@ Java-Voting-System/
 - Documentation and design files have been submitted on **GUVI Platform** along with the GitHub link  
 - Includes class structure and flow of operations  
 
-## Flowchart 
-![Login Screen](Uploading image.png…)!
-
-
-
 ## 📌 Instructions to Run
 1. Clone the repository:  
    ```bash
