@@ -93,7 +93,8 @@ Java-Voting-System/
 - Includes class structure and flow of operations  
 
 ## Flowchart 
-![Uploading 7B7A6150-0448-4186-96B8-BD32F96AE51A.png…]()
+![Uploading image.png…]()
+
 
 
 ## 📌 Instructions to Run
